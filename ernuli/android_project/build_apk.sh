@@ -37,6 +37,6 @@ $SDK/tools/android update project -p . -s --target $ANDROID_TARGET || die 3 "And
 
 echo "Building APK..."
 #=========================================================
-./gradlew assembleDebug || die 4 "Android APK creation is failed"
+ant debug || die 4 "Android APK creation is failed"
 
 echo "Successful."
