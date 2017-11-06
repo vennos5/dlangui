@@ -37,6 +37,6 @@ die () {
 
 echo "Building APK..."
 #=========================================================
-ant debug || die 4 "Android APK creation is failed"
+./gradlew build || die 4 "Android APK creation is failed"
 
 echo "Successful."
