@@ -12,7 +12,7 @@ extern (C) int UIAppMain(string[] args) {
 
     // create window
     Log.d("Creating window");
-    Window window = Platform.instance.createWindow("DlangUI example - HelloWorld", null);
+    Window window = Platform.instance.createWindow("DlangUI example - HelloWorld", null, WindowFlag.Modal);
     Log.d("Window created");
 
     // create some widget to show in window
@@ -21,21 +21,21 @@ extern (C) int UIAppMain(string[] args) {
         VerticalLayout {
             margins: 10pt
             padding: 10pt
-            layoutWidth: fill
+            layoutWidth: wrap
             // red bold text with size = 150% of base style size and font face Arial
-            TextWidget { text: "Hello World example for DlangUI"; textColor: "red"; fontSize: 150%; fontWeight: 800; fontFace: "Arial" }
+            TextWidget { text: "Hello wWorld example for DlangUI"; textColor: "red"; fontSize: 12pt; fontWeight: normal; fontFace: "Arial"; layoutWidth: wrap }
             // arrange controls as form - table with two columns
             TableLayout {
                 colCount: 2
-                layoutWidth: fill
+                layoutWidth: wrap
                 TextWidget { text: "param 1" }
-                EditLine { id: edit1; text: "some text"; layoutWidth: fill }
+                EditLine { id: edit1; text: "some text"; layoutWidth: wrap }
                 TextWidget { text: "param 2" }
-                EditLine { id: edit2; text: "some text for param2"; layoutWidth: fill }
+                EditLine { id: edit2; text: "some text for param2"; layoutWidth: wrap }
                 TextWidget { text: "some radio buttons" }
                 // arrange some radio buttons vertically
                 VerticalLayout {
-                    layoutWidth: fill
+                    layoutWidth: wrap
                     RadioButton { id: rb1; text: "Item 1" }
                     RadioButton { id: rb2; text: "Item 2" }
                     RadioButton { id: rb3; text: "Item 3" }
@@ -43,9 +43,9 @@ extern (C) int UIAppMain(string[] args) {
                 TextWidget { text: "and checkboxes" }
                 // arrange some checkboxes horizontally
                 HorizontalLayout {
-                    layoutWidth: fill
-                    CheckBox { id: cb1; text: "checkbox 1" }
-                    CheckBox { id: cb2; text: "checkbox 2" }
+                    layoutWidth: wrap
+                    CheckBox { id: cb1; text: "checkbox 1"; minWidth: 10pt; }
+                    CheckBox { id: cb2; text: "checkbox 2"; minWidth: 10pt; }
                     ComboEdit { id: ce1; text: "some text"; minWidth: 20pt; items: ["Item 1", "Item 2", "Additional item"] }
                 }
             }

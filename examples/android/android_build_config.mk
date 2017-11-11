@@ -3,7 +3,7 @@
 #=========================================================================
 # Modify this file to specify DLANGUI, Android NDK, SDK and LDC2 locations.
 
-export DLANGUI_DIR=/media/toshiba/dev/ernomon
+export DLANGUI_DIR=`pwd`/../..
 export NDK=$NDK
 export SDK=$ANDROID_HOME
 export LDC=$LDC
