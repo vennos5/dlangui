@@ -22,16 +22,17 @@ extern (C) int UIAppMain(string[] args) {
             margins: 10pt
             padding: 10pt
             layoutWidth: fill
+            layoutHeight: fill
             // red bold text with size = 150% of base style size and font face Arial
-            TextWidget { text: "Too long string can't show everything without scaling!"; fontSize: 6pt; textColor: "red"; }
+            TextWidget { text: "Too long string can't show everything without scaling!"; textColor: "red"; }
             // arrange controls as form - table with two columns
             TableLayout {
                 colCount: 2
                 layoutWidth: fill
                 TextWidget { text: "param 1" }
-                EditLine { id: edit1; text: "some text"; layoutWidth: fill }
+                EditLine { id: edit1; text: "some text";  }
                 TextWidget { text: "param 2" }
-                EditLine { id: edit2; text: "some text for param2"; layoutWidth: fill }
+                EditLine { id: edit2; text: "some text for param2"; }
                 TextWidget { text: "some radio buttons" }
                 // arrange some radio buttons vertically
                 VerticalLayout {
