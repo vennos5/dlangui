@@ -21,21 +21,21 @@ extern (C) int UIAppMain(string[] args) {
         VerticalLayout {
             margins: 10pt
             padding: 10pt
-            layoutWidth: wrap
+            layoutWidth: fill
             // red bold text with size = 150% of base style size and font face Arial
-            TextWidget { text: "Hello wWorld example for DlangUI"; textColor: "red"; fontSize: 12pt; fontWeight: normal; fontFace: "Arial"; layoutWidth: wrap }
+            TextWidget { text: "Too long string can't show everything without scaling!"; fontSize: 6pt; textColor: "red"; }
             // arrange controls as form - table with two columns
             TableLayout {
                 colCount: 2
-                layoutWidth: wrap
+                layoutWidth: fill
                 TextWidget { text: "param 1" }
-                EditLine { id: edit1; text: "some text"; layoutWidth: wrap }
+                EditLine { id: edit1; text: "some text"; layoutWidth: fill }
                 TextWidget { text: "param 2" }
-                EditLine { id: edit2; text: "some text for param2"; layoutWidth: wrap }
+                EditLine { id: edit2; text: "some text for param2"; layoutWidth: fill }
                 TextWidget { text: "some radio buttons" }
                 // arrange some radio buttons vertically
                 VerticalLayout {
-                    layoutWidth: wrap
+                    layoutWidth: fill
                     RadioButton { id: rb1; text: "Item 1" }
                     RadioButton { id: rb2; text: "Item 2" }
                     RadioButton { id: rb3; text: "Item 3" }
@@ -43,13 +43,13 @@ extern (C) int UIAppMain(string[] args) {
                 TextWidget { text: "and checkboxes" }
                 // arrange some checkboxes horizontally
                 HorizontalLayout {
-                    layoutWidth: wrap
-                    CheckBox { id: cb1; text: "checkbox 1"; minWidth: 10pt; }
-                    CheckBox { id: cb2; text: "checkbox 2"; minWidth: 10pt; }
-                    ComboEdit { id: ce1; text: "some text"; minWidth: 20pt; items: ["Item 1", "Item 2", "Additional item"] }
+                    layoutWidth: fill
+                    CheckBox { id: cb1; text: "checkbox 1";  }
+                    CheckBox { id: cb2; text: "checkbox 2";  }
+                    ComboEdit { id: ce1; text: "some text"; items: ["Item 1", "Item 2", "Additional item"] }
                 }
             }
-            EditBox { layoutWidth: 20pt; layoutHeight: 10pt }
+            EditBox {  }
             HorizontalLayout {
                 Button { id: btnOk; text: "Ok" }
                 Button { id: btnCancel; text: "Cancel" }
