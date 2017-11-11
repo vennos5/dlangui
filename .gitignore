@@ -24,3 +24,7 @@ include
 lib/res
 .DS_Store
 *.userprefs
+examples/android/.gradle/*
+examples/android/build/*
+examples/android/freetype
+examples/android/libs
